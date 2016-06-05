@@ -59,7 +59,7 @@
     </light>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>2.02799 -2.37689 0.725145 1.43745e-17 0.263643 1.92019</pose>
+        <pose>1.42389 -1.47603 1.90771 -8.75102e-17 0.883643 1.86419</pose>
         <view_controller>orbit</view_controller>
       </camera>
     </gui>
@@ -137,16 +137,16 @@
       <pose>2 0 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>314 239000000</sim_time>
-      <real_time>91 634584624</real_time>
-      <wall_time>1465078963 125184964</wall_time>
+      <sim_time>818 185000000</sim_time>
+      <real_time>439 716008570</real_time>
+      <wall_time>1465132854 208237325</wall_time>
       <model name='coke_can_0'>
-        <pose>0.800004 -0.000139 -0.00439 -0.035139 0.001226 0.00018</pose>
+        <pose>0.827664 0.168096 -0.004861 -0.042123 0.000328 0.000902</pose>
         <link name='link'>
-          <pose>0.800004 -0.000139 -0.00439 -0.035139 0.001226 0.00018</pose>
+          <pose>0.827664 0.168096 -0.004861 -0.042123 0.000328 0.000902</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.267478 -0.544762 -0.040275 0.005527 0.002736 -9.6e-05</acceleration>
-          <wrench>0.104316 -0.212457 -0.015707 0 -0 0</wrench>
+          <acceleration>-9e-06 6e-06 -1e-06 -0 -0 -0</acceleration>
+          <wrench>-4e-06 2e-06 -0 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -158,6 +158,48 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <model name='hammer'>
+        <pose>0.97479 -0.152346 0.030067 0 -0 0</pose>
+        <link name='link'>
+          <pose>0.97479 -0.152346 0.030067 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
     </state>
+    <model name='hammer'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://hammer/meshes/hammer.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://hammer/meshes/hammer.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose>1 0 0 0 -0 0</pose>
+    </model>
   </world>
 </sdf>
