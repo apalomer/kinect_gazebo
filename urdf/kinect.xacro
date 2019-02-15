@@ -4,21 +4,12 @@
 
   <xacro:include filename="$(find kinect_gazebo)/urdf/kinect.gazebo" />
 
-  <!-- Used for fixing robot to Gazebo 'base_link' -->
-  <link name="world"/>
-
-  <joint name="camera_joint" type="fixed">
-    <origin xyz="0  0 0.2" rpy="0 0 3.14159"/>
-    <parent link="world"/>
-    <child link="camera_link"/>
-  </joint>
-
   <!-- Kinect -->
   <link name="camera_link">
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
       <geometry>
-	    <box size="0.05 0.05 0.05"/>
+	    <mesh filename="package://kinect_gazebo/meshes/kinect.dae"/>
       </geometry>
     </collision>
 
