@@ -27,4 +27,33 @@
     </inertial>
   </link>
 
+  <link name="camera_rgb_frame"/>
+  <link name="camera_rgb_optical_frame"/>
+  <link name="camera_depth_frame"/>
+  <link name="camera_depth_optical_frame"/>
+
+  <joint name="camera_link_to_rgb_frame" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_rgb_frame"/>
+    <origin xyz="0 -0.045 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="camera_rgb_to_optical" type="fixed">
+    <parent link="camera_rgb_frame"/>
+    <child link="camera_rgb_optical_frame"/>
+    <origin xyz="0 0 0" rpy="1.5707963267948966 0 1.5707963267948966"/>
+  </joint>
+
+  <joint name="camera_link_to_depth_frame" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_depth_frame"/>
+    <origin xyz="0 -0.02 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="camera_depth_to_optical" type="fixed">
+    <parent link="camera_depth_frame"/>
+    <child link="camera_depth_optical_frame"/>
+    <origin xyz="0 0 0" rpy="1.5707963267948966 0 1.5707963267948966"/>
+  </joint>
+
 </robot>
