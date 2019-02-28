@@ -7,14 +7,14 @@
   <!-- Kinect -->
   <link name="camera_link">
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+      <origin xyz="0 -0.005 -0.015" rpy="0 0 1.5708"/>
       <geometry>
 	    <mesh filename="package://kinect_gazebo/meshes/kinect.dae"/>
       </geometry>
     </collision>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+      <origin xyz="0 -0.005 -0.015" rpy="0 0 1.5708"/>
       <geometry>
 	    <mesh filename="package://kinect_gazebo/meshes/kinect.dae"/>
       </geometry>
