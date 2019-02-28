@@ -41,7 +41,7 @@
   <joint name="camera_rgb_to_optical" type="fixed">
     <parent link="camera_rgb_frame"/>
     <child link="camera_rgb_optical_frame"/>
-    <origin xyz="0 0 0" rpy="1.5707963267948966 0 1.5707963267948966"/>
+    <origin xyz="0 0 0" rpy="-1.5707963267948966 0 -1.5707963267948966"/>
   </joint>
 
   <joint name="camera_link_to_depth_frame" type="fixed">
@@ -53,7 +53,7 @@
   <joint name="camera_depth_to_optical" type="fixed">
     <parent link="camera_depth_frame"/>
     <child link="camera_depth_optical_frame"/>
-    <origin xyz="0 0 0" rpy="1.5707963267948966 0 1.5707963267948966"/>
+    <origin xyz="0 0 0" rpy="-1.5707963267948966 0 -1.5707963267948966"/>
   </joint>
 
 </robot>
